@@ -1,0 +1,15 @@
+   /* 태그선택
+   p{
+    color: gray; text-align: right;  text-decoration: overline;
+}
+/* 클래스 선택 */
+/* .paras{
+    color: blue;text-align: left; text-decoration: underline;
+}
+/* id 선택 */
+/* #para{
+    color:aqua; text-align: center; text-decoration: underline;
+} */ 
+#external{
+    color:bisque; text-align: center; text-decoration: underline;
+}
