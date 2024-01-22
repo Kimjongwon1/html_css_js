@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<form id="myForm">
+    <p>이름 :<input type="text"  name="name"></p>
+    <p>이멜 :<input type="text"  name="email"></p>
+    <p>비번 :<input type="text"  name="password"></p>
+    <p><button type="button" onclick="sendData()">제출</button></p>
+    <script>
+        async function sendData(){
+            const jsonData = {
+                name: document.getElementById("name"),
+                email: document.getElementById("email"),
+                password: document.getElementById("password")
+            }
+            const response = await axios({
+                method: 'POST',
+                url:"http://localhost:8080/hello/json-post-handle",
+                data: JSON.stringify(jsonData),
+                headers: {'Content-Type':'application/json'}
+            })
+        }
+    </script>
+</form>
+</body>
+</html>
